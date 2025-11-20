@@ -1,0 +1,366 @@
+{
+  "goals": [
+    "探索浏览器 3D → VR 沉浸式演进路径",
+    "评估 VR 在 EMS/IoT/微电网中的适用性",
+    "寻求跨平台方案（OpenXR / WebXR）",
+    "将 VR 用作操作工具（巡检/控制台/培训）",
+    "与现有系统融合（Vue/Three.js/数据链路）"
+  ],
+  "goalsIntro": [
+    "科技快速发展的今天，前端呈现的方式多种多样，传统的网页展示、移动端页面、大屏可视化已经无法完全满足对沉浸式交互与空间化场景的需求。随着 VR（虚拟现实）技术、WebXR 标准以及各类 XR 设备的不断成熟，越来越多行业开始探索“空间化呈现”“沉浸式操作”以及“虚拟与现实融合”的应用形态。在能源管理、物联网设备监控及微电网系统等场景中，VR 所具备的可视化优势与交互能力，正在展现出新的价值。",
+    "之前对于前端跨平台技术的的碘盐，也启发我们在VR的研发中寻找可以支持我们跨平台作业的解决方案，从而减少我们的开发成本、提高开发效率。"
+  ],
+  "goalsItems": [
+    {
+      "title": "1. 探索未来前端呈现方式的延伸路径",
+      "details": [
+        "研究 VR技术在现代前端体系中的角色与能力，明确“浏览器 3D → VR 沉浸式场景”的演进可能。"
+      ]
+    },
+    {
+      "title": "2. 评估 VR 在 EMS/IoT/微电网领域的适用性",
+      "details": [
+        "分析 VR 是否能够在能量管理、设备巡检、数字孪生监控等业务场景中带来更直观、更高效的操作体验。"
+      ]
+    },
+    {
+      "title": "3. 寻求VR中可能存在的跨平台方案",
+      "details": [
+        "对当前的VR技术进行整合分析，寻求可以实现跨平台VR研发的解决方案。"
+      ]
+    },
+    {
+      "title": "4. 为未来的 VR 工具化应用奠定基础",
+      "details": [
+        "探索如何将 VR 用作“操作工具”，如 VR 控制台、VR 现场巡检、VR 故障模拟培训，而不只是 3D 可视化的延伸。"
+      ]
+    },
+    {
+      "title": "5. 规划 VR 与现有系统的融合方式",
+      "details": [
+        "包括与现有 EMS 系统、IoT 数据链路、数字孪生场景（Three.js）以及前端框架（Vue）进行技术整合的可能路线。"
+      ]
+    },
+    {
+      "title": "期望产出",
+      "details": [
+        "明确 VR 技术在业务中的真实价值与可落地性",
+        "探索未来可替代或补充现有前端形式的“空间化工作界面”",
+        "为后续构建 VR 数字孪生、VR 设备操作、VR 培训与演练系统奠定可行的技术基础",
+        "为未来的前端架构升级提供方向性参考"
+      ]
+    }
+  ],
+  "goalsMd": "## 背景与目标\n在当今前端形态快速演进的背景下，VR（虚拟现实）与 WebXR 正成为“空间化呈现/沉浸式交互”的重要方向。结合能源管理（EMS）、物联网（IoT）与微电网场景，本调研旨在：\n\n1. 探索“浏览器 3D → VR 沉浸式场景”的演进路径\n2. 评估 VR 在 EMS/IoT/微电网中的适用性（巡检、数字孪生、培训）\n3. 寻求跨平台方案（OpenXR/WebXR）以降低研发与运维成本\n4. 将 VR 作为“操作工具”，如 VR 控制台、巡检、故障演练与培训\n5. 规划 VR 与 EMS/IoT/Three.js/Vue 的融合路线\n",
+  "stack": [
+    {
+      "id": "hardware",
+      "title": "硬件层",
+      "bullets": [
+        "头显显示（HMD）",
+        "6DoF 追踪与手势/控制器",
+        "空间定位：Inside-out / Lighthouse / SLAM"
+      ]
+    },
+    {
+      "id": "runtime",
+      "title": "运行时层",
+      "bullets": [
+        "SteamVR / Meta XR / Pico XR Runtime",
+        "帧同步与渲染调度、系统边界",
+        "向应用暴露统一的设备能力"
+      ]
+    },
+    {
+      "id": "standards",
+      "title": "标准层",
+      "bullets": [
+        "OpenXR：原生统一标准，跨设备",
+        "WebXR：浏览器 XR API",
+        "减少碎片化，统一接口"
+      ]
+    },
+    {
+      "id": "engines",
+      "title": "引擎层",
+      "bullets": [
+        "Unity / Unreal / Three.js / Babylon.js",
+        "场景、材质、动画、交互、渲染管线",
+        "屏蔽底层细节，专注业务逻辑"
+      ]
+    },
+    {
+      "id": "apps",
+      "title": "应用层",
+      "bullets": [
+        "巡检、控制台、培训、数字孪生可视化",
+        "与 EMS/IoT 数据融合",
+        "把技术转化为业务价值"
+      ]
+    }
+  ],
+  "solutions": {
+    "unity": {
+      "intro": "跨平台通用的工程级 XR 方案，XRI 交互完善",
+      "architecture": [
+        "硬件 → OpenXR Runtime",
+        "Unity XR Plug-in Management",
+        "Unity XR SDK",
+        "XR Interaction Toolkit",
+        "应用层（场景/UI/逻辑）"
+      ],
+      "architectureDesc": [
+        "OpenXR Runtime 统一硬件能力与接口",
+        "插件管理承载各平台XR能力",
+        "XR SDK 提供渲染/追踪/输入基础",
+        "XRI 封装交互（射线/抓取/传送/UI）",
+        "业务场景、流程与UI逻辑"
+      ],
+      "capabilities": [
+        { "text": "6DoF 位置/姿态追踪", "tip": "六自由度：位置(x,y,z)+姿态(roll,pitch,yaw)" },
+        { "text": "控制器/手势/Haptics", "tip": "Haptics：触觉反馈/震动" },
+        { "text": "World Space UI、射线/近场交互", "tip": "UI在世界空间中摆放，配合射线点击/近距离抓取" },
+        { "text": "模型/物理/动画/粒子" }
+      ],
+      "pros": [
+        "跨平台强（OpenXR）",
+        "交互系统完善（XRI）",
+        "工业场景/性能成熟"
+      ],
+      "cons": [
+        "学习/开发成本较高",
+        "部署较复杂",
+        "多人/网络需额外框架"
+      ],
+      "use": [
+        "设备操作培训/SOP",
+        "大型数字孪生",
+        "工程交互"
+      ],
+      "notUse": [
+        "纯 Web 快速访问场景"
+      ],
+      "products": [
+        {
+          "title": "ForgeFX 工业培训模拟",
+          "intro": "基于 Unity XRI 的工业设备交互训练，覆盖抓取/按钮/传送等通用交互。",
+          "highlights": ["通用交互组件缩短开发周期", "设备行为与物理反馈", "支持独立式头显"],
+          "image": { "url": "https://images.unsplash.com/photo-1581091215367-59ab6b58a3f5?q=80&w=1200&auto=format&fit=crop", "source": "Unsplash", "alt": "Unity XR Training" },
+          "link": "https://unity.com/",
+          "details": "适合“电力设备操作/维修流程 VR”场景，可直接复用交互与流程设计思路。"
+        }
+      ]
+    },
+    "unreal": {
+      "intro": "顶级画质与仿真能力，适合高逼真与大场景",
+      "architecture": [
+        "硬件 → OpenXR Runtime",
+        "Unreal XR Framework",
+        "Enhanced Input & Motion Controller",
+        "Blueprint/C++ XR Components",
+        "Nanite + Lumen 渲染"
+      ],
+      "capabilities": [
+        { "text": "电影级渲染、实时光追", "tip": "Lumen/RTGI/RTX级特性" },
+        { "text": "Chaos 物理、Niagara 粒子", "tip": "工业特效/物理仿真优势" },
+        { "text": "大世界分区", "tip": "World Partition 大场景流式管理" }
+      ],
+      "pros": [
+        "渲染最强、仿真能力强",
+        "超大场景处理",
+        "OpenXR 兼容"
+      ],
+      "cons": [
+        "门槛与成本高",
+        "包体与部署重",
+        "非 Web 方案"
+      ],
+      "use": [
+        "高逼真演练/故障/安全培训",
+        "展厅级数字孪生、1:1 还原"
+      ],
+      "notUse": [
+        "Web 端轻量 VR",
+        "低成本快速迭代"
+      ],
+      "products": [
+        {
+          "title": "能源数据 VR 可视化（UE5）",
+          "intro": "基于 UE5 的校园能源系统 VR 可视化研究，聚焦数据融合与沉浸式展示。",
+          "highlights": ["Nanite/Lumen 高保真", "能源流/设备状态可视化", "适合培训/展陈/监控"],
+          "image": { "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop", "source": "Unsplash", "alt": "Unreal Energy VR" },
+          "link": "https://www.unrealengine.com/",
+          "details": "适合“故障仿真/安全培训/展厅级移交”，但对硬件与团队要求较高。"
+        }
+      ]
+    },
+    "three": {
+      "intro": "最轻量的 Web VR 渲染方案，便于快速分发",
+      "architecture": [
+        "硬件 → WebXR 浏览器",
+        "WebXR API",
+        "Three.js 渲染/场景/模型",
+        "应用代码（交互/逻辑）"
+      ],
+      "capabilities": [
+        { "text": "6DoF、控制器输入" },
+        { "text": "Raycast 交互", "tip": "射线拾取用于远距离点击/选择" },
+        { "text": "GLTF/FBX 模型加载" }
+      ],
+      "pros": [
+        "无需安装、跨平台强",
+        "前端团队友好、部署简单"
+      ],
+      "cons": [
+        "性能有限",
+        "工业级交互较弱",
+        "画质与特效受限"
+      ],
+      "use": [
+        "轻量数字孪生与看板",
+        "静态/中小型场景漫游",
+        "快速原型"
+      ],
+      "notUse": [
+        "培训/仿真/重交互",
+        "大型写实场景"
+      ],
+      "products": [
+        {
+          "title": "MolecularWebXR（示例同类）",
+          "intro": "基于 WebXR 的多人教育/教学平台，浏览器即可进入多人协作 VR。",
+          "highlights": ["浏览器访问", "多人实时协作", "可扩展到巡检/培训讨论"],
+          "image": { "url": "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop", "source": "Unsplash", "alt": "WebXR Collaboration" },
+          "link": "https://threejs.org/",
+          "details": "适合“跨平台轻量体验”，不适合高仿真训练。"
+        }
+      ]
+    },
+    "babylon": {
+      "intro": "WebXR 内建完善、引擎化与 WebGPU 领先",
+      "architecture": [
+        "硬件 → WebXR Runtime",
+        "WebXR API",
+        "Babylon WebXR ExperienceHelper",
+        "Babylon 引擎（场景/GUI/物理）"
+      ],
+      "capabilities": [
+        { "text": "进入/退出 VR、控制器/手势" },
+        { "text": "GUI 面板、节点材质" },
+        { "text": "WebGPU 性能更优", "tip": "WebGPU 在现代浏览器中性能优于 WebGL" }
+      ],
+      "pros": [
+        "WebXR 原生、工具链丰富",
+        "引擎化结构完整",
+        "多平台浏览器"
+      ],
+      "cons": [
+        "仍是 Web 技术，重交互受限",
+        "学习成本较 Three.js 高"
+      ],
+      "use": [
+        "中型可视化与数字孪生",
+        "浏览器 VR 快速访问"
+      ],
+      "notUse": [
+        "高仿真培训/重交互",
+        "大型 1:1 写实场景"
+      ],
+      "products": [
+        {
+          "title": "Babylon.js Digital Twins & IoT",
+          "intro": "Babylon 官方 DT/IoT 示例，可监控与可视化实体系统并支持 WebXR。",
+          "highlights": ["WebXR 原生", "GUI/材质可视化工具", "WebGPU 性能领先"],
+          "image": { "url": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop", "source": "Unsplash", "alt": "Babylon Digital Twins" },
+          "link": "https://www.babylonjs.com/",
+          "details": "适合中型可视化/看板类 VR，训练/仿真类不建议。"
+        }
+      ]
+    }
+  },
+  "stackDetails": {
+    "hardware": {
+      "paragraphs": [
+        "负责感知与输出：HMD 显示、6DoF 追踪、手柄与手势、SLAM。常见设备：Meta Quest、Pico、HTC Vive、Valve Index、Varjo XR 等。",
+        "输入设备包括 VR 控制器、手势追踪、Vive Tracker 等；定位系统有 Inside-out、Lighthouse、SLAM 等。"
+      ],
+      "images": [
+        { "url": "https://images.unsplash.com/photo-1551817958-20204e4980af?q=80&w=1200&auto=format&fit=crop", "source": "Unsplash", "alt": "VR HMD" },
+        { "url": "https://images.unsplash.com/photo-1580237072617-ecd0a53a1f52?q=80&w=1200&auto=format&fit=crop", "source": "Unsplash", "alt": "VR Controllers" }
+      ]
+    },
+    "runtime": {
+      "paragraphs": [
+        "运行时（SteamVR/Meta XR/Pico XR）负责管理设备、空间边界、帧同步与渲染调度，并对应用暴露统一能力。"
+      ],
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Steam_logo.png", "source": "Wikipedia", "alt": "SteamVR" }
+      ]
+    },
+    "standards": {
+      "paragraphs": [
+        "OpenXR：原生标准，统一各设备动作/姿态/输入/渲染接口，被 Unity/Unreal/SteamVR/Quest/Pico 采用。",
+        "WebXR：浏览器 XR API，Web 应用可进入 VR/AR 模式。Three.js/Babylon.js 借此获得 VR 能力。",
+        "关系：浏览器可基于系统 XR API（通常是 OpenXR）对外暴露 WebXR，前端仅需使用 WebXR 即可。",
+        "注意事项（WebXR）：需考虑浏览器与头显兼容矩阵、HTTPS 环境、用户手势才能进入会话、性能与功耗限制。"
+      ],
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/OpenXR_logo.svg", "source": "Wikipedia", "alt": "OpenXR" },
+        { "url": "https://immersive-web.github.io/webxr/assets/webxr-logo.png", "source": "Immersive Web", "alt": "WebXR" }
+      ]
+    },
+    "engines": {
+      "paragraphs": [
+        "Unity/Unreal（原生）与 Three.js/Babylon.js（Web）承担场景、材质、交互、渲染等核心功能；原生适合高仿真与复杂交互，Web 适合轻量可视化与快速访问。"
+      ],
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Unity_2021.svg", "source": "Wikipedia", "alt": "Unity" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Unreal_Engine_Logo.svg", "source": "Wikipedia", "alt": "Unreal" },
+        { "url": "https://threejs.org/files/favicon.ico", "source": "threejs.org", "alt": "Three.js" },
+        { "url": "https://www.babylonjs.com/assets/favicon.ico", "source": "babylonjs.com", "alt": "Babylon.js" }
+      ]
+    },
+    "apps": {
+      "paragraphs": [
+        "巡检/控制台/培训/仿真/数字孪生等业务场景，将技术转化为业务价值：例如电站巡检路线、设备操作SOP、安全培训演练、微电网孪生监控等。"
+      ]
+    }
+  },
+  "compare": {
+    "columns": ["渲染", "交互", "性能", "跨平台", "学习成本", "部署", "浏览器"],
+    "rows": [
+      { "name": "Unreal", "values": ["最强", "完整", "高", "OpenXR", "高", "重", "否"] },
+      { "name": "Unity", "values": ["高", "XRI 完备", "高", "OpenXR", "中", "中", "否"] },
+      { "name": "Babylon.js", "values": ["中（WebGPU）", "完整", "中", "浏览器", "中", "轻", "是"] },
+      { "name": "Three.js", "values": ["中-", "基础", "中-", "浏览器", "低", "轻", "是"] }
+    ],
+    "categories": [
+      "技术定位对比",
+      "渲染能力对比",
+      "性能对比",
+      "交互能力对比",
+      "开发方式对比"
+    ]
+  },
+  "recommend": [
+    { "scenario": "高逼真 VR 演练/故障/安全培训", "tech": "Unreal Engine + OpenXR" },
+    { "scenario": "工控 VR 操作/设备交互/协同培训", "tech": "Unity XR + OpenXR" },
+    { "scenario": "Web 端轻量数字孪生/数据看板/可视化", "tech": "Babylon.js + WebXR" },
+    { "scenario": "超轻量 Web VR 演示/漫游/原型", "tech": "Three.js + WebXR" }
+  ],
+  "references": [
+    { "title": "OpenXR · Khronos", "url": "https://www.khronos.org/openxr/" },
+    { "title": "WebXR Device API", "url": "https://immersive-web.github.io/webxr/" },
+    { "title": "Unity", "url": "https://unity.com/" },
+    { "title": "Unreal Engine", "url": "https://www.unrealengine.com/" },
+    { "title": "Three.js", "url": "https://threejs.org/" },
+    { "title": "Babylon.js", "url": "https://www.babylonjs.com/" }
+  ],
+  "summary": [
+    "原生（Unreal/Unity）：适合高仿真/训练/复杂交互；",
+    "Web（Babylon/Three）：适合轻量可视化/看板/无安装快速访问；",
+    "微电网/EMS：训练→原生优先；运营展示/可视化→Web 优先。"
+  ]
+}
+
+
